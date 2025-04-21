@@ -6,6 +6,7 @@
 
 body {
   background-color: rgb(255, 255, 255);
+  background: radial-gradient(circle, #ffffff, #9fc4fc);
 }
 
 .container {
@@ -151,7 +152,7 @@ h2 {
 }
 
 .right {
-  padding-top: 90px;
+  padding-top: 80px;
 }
 
 .kkaturi-png {
@@ -174,7 +175,6 @@ img.full-width {
   background-color: white;
   padding: 20px;
   border-radius: 20px;
-  margin: 0;
   max-width: 600px;
   width: 100%;
   transition: transform 0.5s ease;
@@ -186,63 +186,126 @@ img.full-width {
   transform: translate(-50%, -50%) translateY(-10px);
 }
 
-@media screen and (max-width: 768px) {
-  .navbar {
-    height: auto;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+  width: 300px;
+}
 
-  .navbar .container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: auto;
-    flex-wrap: wrap;
-  }
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
 
-  .navbar ul {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    width: auto;
-    padding: 0;
-    margin: 0;
-  }
+th {
+  background-color: #f2f2f2;
+}
 
-  .navbar ul li {
-    margin: 0 10px;
-  }
-
-  img {
-    display: block;
-    margin: 20px auto;
-    max-width: 80%;
-    height: auto;
-  }
-
-  img.full-width {
-    display: block;
-    margin: auto;
-    width: 100%;
-    max-width: none;
-    height: auto;
-  }
-
+@media screen and (min-width: 600px) and (max-width: 1000px) {
   .container {
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
     text-align: center;
   }
 
-  .container-box {
+  .box {
+    flex-direction: column;
+    width: auto;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .box2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .white-box {
+    top: 40%;
+    font-size: 22px;
+    padding: 18px;
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .big {
+    font-size: 40px;
+  }
+
+  .big-s {
+    font-size: 25px;
+  }
+
+  table,
+  th,
+  td {
+    padding: 6px;
+    font-size: 16px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
     flex-direction: column;
     align-items: center;
+    padding: 0 10px;
     text-align: center;
-    padding: 20px;
   }
 
-  .left,
-  .right {
-    padding: 10px 0;
+  .box {
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .box2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .white-box {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    font-size: 15px;
+    width: 90%;
+    max-width: none;
+    text-align: center;
+  }
+
+  .white-box p {
+    font-size: 13px;
+  }
+
+  .big {
+    font-size: 30px;
+  }
+
+  .big-s {
+    font-size: 20px;
+  }
+
+  table,
+  th,
+  td {
+    padding: 4px;
+    font-size: 14px;
+  }
+
+  .navbar .logo {
+    font-size: 20px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }
